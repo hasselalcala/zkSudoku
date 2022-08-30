@@ -1,3 +1,5 @@
+const hre = require("hardhat");
+
 const main = async () => {
     const SudokuVerifier = await hre.ethers.getContractFactory("sudokuVerifier");
     const sudokuVerifier = await SudokuVerifier.deploy();

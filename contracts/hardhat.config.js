@@ -20,7 +20,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
-module.exports = {
+/*module.exports = {
   solidity: {
     version: "0.8.4",
     settings: {
@@ -38,6 +38,20 @@ module.exports = {
     harmonyMainnet: {
       url: "https://api.harmony.one",
       accounts: [process.env.PRIVATE_KEY],
+    },
+  },
+};*/
+module.exports = {
+  solidity: "0.8.4",
+  networks: {
+    hardhat: {
+      chainId: 1337,
+    },
+    mumbai: {
+      url: process.env.STAGING_INFURA_URL,
+      accounts: [`0x${process.env.STAGING_PRIVATE_KEY}`],
+      gas: 2100000,
+      gasPrice: 8000000000,
     },
   },
 };
