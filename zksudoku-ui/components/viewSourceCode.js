@@ -1,4 +1,4 @@
-const GITHUB_LINK = "https://github.com/vplasencia/zkSudoku";
+const GITHUB_LINK = "https://github.com/hasselalcala/zkSudoku";
 
 export default function ViewSourceCode() {
   return (
